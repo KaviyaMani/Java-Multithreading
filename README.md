@@ -1,5 +1,5 @@
 
-# Concurrency
+## Concurrency
     Ability to do more than one thing at a time
     Concurrency does not mean parallel execution in a single processor computer.
     When we have 1 processor obviosly it can do only 1 thing at a time but it can pause 1 task and do the next task for sometime.
