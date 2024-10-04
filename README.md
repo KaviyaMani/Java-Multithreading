@@ -1,5 +1,4 @@
 # Concurrency
-    
     Ability to do more than one thing at a time
     Concurrency does not mean parallel execution in a single processor computer.
     When we have 1 processor obviosly it can do only 1 thing at a time but it can pause 1 task and do the next task for sometime.
@@ -278,5 +277,6 @@ Note: Even Diff thread with Diff instance can't call simultaneously since lock i
         3. If lock available, thread acquires lock and execute
         4. If one thread executes, lock won't be available for other thread hence it waits
         5. Once thread done execution, it releases the lock for other threads to acquire
-#   J a v a - M u l t i t h r e a d i n g  
+#   J a v a - M u l t i t h r e a d i n g 
+ 
  
