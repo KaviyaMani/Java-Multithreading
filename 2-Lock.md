@@ -29,8 +29,10 @@
 
     Locks - 
         Lock does not depend on object
-        can achieve fairness within Lock APIs by fairness property. makes sure that the longest waiting thread is given access to the lock
-        Lock API provides tryLock() method. The thread acquires lock only if it’s available and not held by any other thread. reduce waiting time
+        can achieve fairness within Lock APIs by fairness property. makes sure that the longest waiting thread is given 
+            access to the lock
+        Lock API provides tryLock() method. The thread acquires lock only if it’s available and not held by any other thread. 
+            reduce waiting time
         Lock API provides a method lockInterruptibly() that can be used to interrupt the thread when it’s waiting for the lock.
         lock and unlock can be called from diff methods
         Lock could decide to be reentrant or not
@@ -44,7 +46,8 @@
     Semaphore
 
 ### Reentrant Lock
-Reentrance means, If a thread already holds the lock on a monitor object, it has access to all blocks synchronized on the same monitor object
+Reentrance means, If a thread already holds the lock on a monitor object, it has access to all blocks synchronized on \
+the same monitor object
 
     Scenario 1: If a thread which holds the lock try to get the lock again it can get only if the type of lock is Reentrant
         If the lock type is diff, lock will reach Reentrant lockout(deadlock) since thread will wait to get the lock which is hold by itself
@@ -98,7 +101,7 @@ The lock() method locks the Lock instance so that all threads calling lock() are
         Extra @Version column attached to table, which keep track of changes. initially 1 keep on updating for each changes
         each transaction that reads data holds the value of the version property.
         Before the transaction wants to make an update, it checks the version property again.
-        If the value has changed in the meantime, an OptimisticLockException is thrown.
+        If the value has changed in the meantime, an OptimisticLockException is thrown. start the transaction again
         else, transaction commits the update and increments a value version property.
 #### Pessimistic Lock -
     the pessimistic locking mechanism involves locking entities on the database level.
@@ -131,7 +134,8 @@ The lock() method locks the Lock instance so that all threads calling lock() are
 ### Semaphore Lock
     to limit the number of concurrent threads accessing a specific resource.
     can be used to limit the number of users in the system
-        **tryAcquire()** – return true if a permit is available immediately and acquire it otherwise return false, but acquire() acquires a permit and blocking until one is available
+        **tryAcquire()** – return true if a permit is available immediately and acquire it otherwise return false, 
+                            but acquire() acquires a permit and blocking until one is available
         **release()** – release a permit
         **availablePermits()** – return number of current permits available
     acquire(), release(), drainPermits(), 

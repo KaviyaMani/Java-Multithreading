@@ -6,7 +6,8 @@
         From the queue pool of threads will take the task and executes them
         Once thread executed the task it takes new task from the queue.
         If no new tasks to do, It will wait for the tasks to arrive
-        If we mentioned keepAliveTime, after that time if we have more threads than min no. of threads remaining threads will be removed from pool
+        If we mentioned keepAliveTime, after that time if we have more threads than min no. of 
+            threads remaining threads will be removed from pool
         Submitted task does not depend on 1 particular thread to execute it. whichever thread is free takes and executes it
     What happens when submit a task?
         check if thread available? if yes assign the task to that thread
@@ -19,7 +20,7 @@
 
 ### Thread Pool implementation
     Thread Pool contains
-        Custom Thread Pool - CustomThreadPool.java
+        Custom Thread Pool implementation - CustomThreadPool.java
                 BlockingQueue - To store the taks
                 List<RunnableThread> - Based on what is the size of pool
                 flag - to check whether pool is active or not

@@ -35,7 +35,8 @@ Note: Using volatile variable is not enough to achieve concurrency
     To avoid this should use synchronized or atomic data types
 ### Cache Coherence - CPU's can share data between them through their caches no need to get it from main memory
     When Thread writes to volatile or exits synchronized block VM flushes thread visible variables from CPU registers to main memory.
-    On the underground, values are flushed only to CPU cache, since it is available in cache it is visible to other CPUs and other thread can use
+    On the underground, values are flushed only to CPU cache, since it is available in cache it is visible to other 
+            CPUs and other thread can use
     Eventually this data will be flushed to main memory but not actively
 ![img_4.png](img_4.png)
 
@@ -45,7 +46,8 @@ Note: Using volatile variable is not enough to achieve concurrency
     When getting, each thread will get the value set by it - not any value set by other threads.
     Each operation happen on ThreadLocal variable is local to that thread, copy is created for each
     ThreadLocalExample.java
-Note: Be caution while using ThreadLocal in Thread Pool, since same thread might execute multiple tasks, same ThreadLocal value for multiple tasks\
+Note: Be caution while using ThreadLocal in Thread Pool, since same thread might execute multiple tasks,\
+same ThreadLocal value for multiple tasks\
 TL values are unique to Threads not tasks
 
 ## Race conditions
